@@ -1,0 +1,13 @@
+<div class="sidebar">
+    <h2>Sentiment App</h2>
+    <a href="/">🏠 Home</a>
+    <a href="/predict">🔍 Analyze Sentiment</a>
+    <a href="/history">📜 View History</a>
+
+    {% if session.get('username') %}
+        <a href="/logout">🚪 Logout</a>
+    {% else %}
+        <a href="/login">🔑 Login</a>
+        <a href="/register">📝 Register</a>
+    {% endif %}
+</div>

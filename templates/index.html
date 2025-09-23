@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sidebar.css') }}">
+</head>
+<body>
+    {% include "sidebar.html" %}
+
+    <!-- Wrap content in main-content for centering -->
+    <div class="main-content">
+        <h1>Sentiment Analysis App</h1>
+
+        <!-- Form that sends text to Flask /predict route -->
+        <form action="/predict" method="post">
+            <textarea name="text" placeholder="Type your review here..." required></textarea><br>
+            <input type="submit" value="Analyze">
+        </form>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if prediction %}
+            <div class="result">
+                <h2>Input: {{ input_text }}</h2>
+                <h2>Prediction: {{ prediction }}</h2>
+                {% if proba %}
+                    <h3>Confidence: {{ (proba * 100) | round(2) }}%</h3>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

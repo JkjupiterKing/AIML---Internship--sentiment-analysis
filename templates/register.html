@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Sentiment Analysis App</title>
+  <link rel="stylesheet" href="/static/register.css">
+</head>
+<body>
+
+  <div class="overlay"></div>
+  <div class="login-container">
+    <div class="login-card">
+      <h1 class="title">Create an Account</h1>
+
+      <form action="/register" method="post">
+        <div class="input-group">
+          <input type="text" name="username" placeholder="Enter username" required>
+          <label>Username</label>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Enter email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" placeholder="Enter password" required>
+          <label>Password</label>
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+
+      <p class="register-text">
+        Already have an account? <a href="/login">Login</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

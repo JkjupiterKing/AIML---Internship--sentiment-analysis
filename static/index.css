@@ -1,0 +1,78 @@
+/* Body styling: full viewport, neutral background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(43, 226, 217); /* match login/register/home page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main content card */
+.main-content {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Title */
+h1 {
+    color: darkblue;
+    margin-bottom: 20px;
+}
+
+/* Textarea styling */
+textarea {
+    width: 90%;
+    height: 120px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: darkblue;
+}
+
+/* Submit button */
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    background-color: darkblue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: navy;
+}
+
+/* Result card */
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 90%;
+    text-align: left;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}

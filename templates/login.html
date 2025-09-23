@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Sentiment Analysis App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+
+  <div class="overlay"></div>
+  <div class="login-container"> 
+    <div class="login-card">
+      <h1 class="title">Welcome</h1>
+      <p class="subtitle">
+        Please login to your account
+      </p>
+
+      <!-- Display flash messages with categories -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for category, message in messages %}
+              <p class="flash-{{ category }}">{{ message }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <form action="{{ url_for('login') }}" method="post">
+        <div class="input-group">
+          <input type="text" name="username" value="{{ request.form.username }}" required>
+          <label>Username</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" required>
+          <label>Password</label>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <p class="register-text">
+        Don’t have an account? <a href="{{ url_for('register') }}">Register</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

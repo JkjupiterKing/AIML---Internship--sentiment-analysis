@@ -1,0 +1,140 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(43, 226, 217);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    z-index: 0;
+}
+
+/* Container for centering card */
+.login-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Login card */
+.login-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 360px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Title */
+.login-card .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: darkblue;
+}
+
+/* Subtitle */
+.login-card .subtitle {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.login-card .subtitle span {
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* Flash error messages */
+.flash-messages {
+    margin-bottom: 15px;
+}
+.flash-error {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    background: #ffe0e0;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Input groups */
+.input-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: darkblue;
+}
+
+/* Floating labels */
+.input-group label {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Login button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: darkblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: navy;
+}
+
+/* Footer link */
+.register-text {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #333;
+}
+
+.register-text a {
+    color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    color: navy;
+}
